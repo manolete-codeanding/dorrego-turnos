@@ -296,6 +296,37 @@ body {
 .p-label { font-size: 0.7rem; color: var(--muted); font-weight: 600; text-transform: uppercase; }
 .p-value { font-size: 1.05rem; font-weight: 700; margin-top: 0.1rem; }
 
+/* ── SPINNER / LOADING ────────────────────────────────── */
+.loading-overlay {
+  position: fixed; inset: 0; background: rgba(255,255,255,0.7);
+  z-index: 300; display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.spinner {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  animation: spin 0.7s linear infinite;
+}
+.spinner-light { border-color: rgba(255,255,255,0.2); border-top-color: #fff; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── ALERTS ───────────────────────────────────────────── */
+.alert-error {
+  background: #fee2e2; border: 1px solid #fca5a5; border-radius: 8px;
+  padding: 0.75rem 1rem; font-size: 0.875rem; color: #991b1b;
+  margin-bottom: 1rem; line-height: 1.5;
+}
+.alert-error a { color: #991b1b; font-weight: 600; }
+
+/* ── INLINE LINK BUTTON ───────────────────────────────── */
+.btn-link-inline {
+  background: none; border: none; color: var(--accent);
+  font-size: 0.8rem; cursor: pointer; padding: 0; text-decoration: underline;
+  text-underline-offset: 2px; font-family: inherit;
+}
+.btn-link-inline:hover { color: #4338ca; }
+
 /* ── RESPONSIVE ───────────────────────────────────────── */
 @media (max-width: 400px) {
   .slot-badge { display: none; }
