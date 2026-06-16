@@ -15,12 +15,12 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const firebaseConfig = {
-  apiKey:            "REEMPLAZAR",
-  authDomain:        "REEMPLAZAR.firebaseapp.com",
-  projectId:         "REEMPLAZAR",
-  storageBucket:     "REEMPLAZAR.appspot.com",
-  messagingSenderId: "REEMPLAZAR",
-  appId:             "REEMPLAZAR"
+  apiKey:            "AIzaSyD_Iv536pxgUDGNEOs0jFXH5KI24jKfYkU",
+  authDomain:        "dorrego-turnos-b3388.firebaseapp.com",
+  projectId:         "dorrego-turnos-b3388",
+  storageBucket:     "dorrego-turnos-b3388.firebasestorage.app",
+  messagingSenderId: "627354990926",
+  appId:             "1:627354990926:web:77d5b3013b18b3d821061f"
 };
 
 firebase.initializeApp(firebaseConfig);
