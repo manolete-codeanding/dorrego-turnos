@@ -1,6 +1,6 @@
 // ── CONFIG ────────────────────────────────────────────────────────────────────
-const ADMIN_SESSION_KEY = 'dorrego_admin';
-const ADMIN_PASSWORD    = 'cheleado';
+const ADMIN_SESSION_KEY  = 'dorrego_admin';
+const ADMIN_PASSWORDS    = ['cheleado', 'enchelado'];
 const WASH_DUR = 30, DRY_DUR = 60;
 
 function genSlots(type) {
@@ -512,7 +512,7 @@ async function doModalSave() {
 // ── ADMIN LOGIN ───────────────────────────────────────────────────────────────
 function doAdminLogin() {
   const pwd = val('input-admin-pwd');
-  if (pwd !== ADMIN_PASSWORD) {
+  if (!ADMIN_PASSWORDS.includes(pwd)) {
     state.error = 'Contraseña incorrecta.';
     render();
     document.getElementById('input-admin-pwd')?.focus();
